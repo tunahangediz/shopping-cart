@@ -70,7 +70,7 @@ function ShoppingState(props) {
         const checkCart = state.cart.find((item) => item.id === product.id);
         if (checkCart) {
             const newCart = state.cart.map((item) =>
-                item.id == product.id
+                item.id === product.id
                     ? { ...item, amount: item.amount + 1 }
                     : item,
             );
@@ -88,19 +88,33 @@ function ShoppingState(props) {
         }
     };
 
-    const decrement = (product) => {
+    const increment = (product) => {
         const newCart = state.cart.map((item) =>
-            item.id == product.id && product.amount > 0
-                ? { ...item, amount: item.amount - 1 }
+            item.id === product.id
+                ? { ...item, amount: item.amount + 1 }
                 : item,
         );
         dispatch({ type: ADD_CART, payload: newCart });
     };
 
-    const increment = (product) => {
-        const newCart = state.cart.map((item) =>
-            item.id == product.id ? { ...item, amount: item.amount + 1 } : item,
-        );
+    const decrement = (product) => {
+        let newCart;
+        let index;
+        if (product.amount === 0) {
+            newCart = [...state.cart];
+            for (let i = 0; i < newCart.length; i++) {
+                if (newCart[i].id === product.id) {
+                    index = i;
+                }
+            }
+            newCart.splice(index, 1);
+        } else {
+            newCart = state.cart.map((item) =>
+                item.id === product.id
+                    ? { ...item, amount: item.amount - 1 }
+                    : item,
+            );
+        }
         dispatch({ type: ADD_CART, payload: newCart });
     };
 

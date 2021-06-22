@@ -6,6 +6,7 @@
 }
 body {
     width: 100vw;
+    /* background-color: rgb(0, 77, 172); */
 }
 
 .bg-primary {
@@ -58,10 +59,13 @@ a {
     margin: 0 auto;
 }
 .product {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     padding: 1rem;
     gap: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 16px 3px #aea9a977;
 }
 
 .flex {
@@ -87,14 +91,15 @@ a {
 }
 
 .btn-primary {
-    background-color: coral;
+    background-color: rgb(255, 98, 41);
     color: white;
     font-size: medium;
     border: none;
+    border-radius: 2px;
 }
 
 .btn-primary:hover {
-    background-color: rgb(254, 85, 24);
+    background-color: rgb(254, 72, 6);
     color: white;
 }
 .btn-primary:active {

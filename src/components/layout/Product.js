@@ -4,25 +4,25 @@ const Product = ({ product }) => {
     const ShoppingContext = useContext(shoppingContext);
 
     return (
-        <div className="product">
+        <div className="product ">
             <img src={product.image} style={{ width: "250px" }} alt="" />
 
             <div className="flex flex-column gap-4 content-center">
                 <h4>{product.name}</h4>
                 <p>
-                    <strong>Yazar: </strong>
+                    <strong>Author: </strong>
                     {product.author}
                 </p>
                 <p>
-                    <strong>Fiyat: </strong>
+                    <strong>Price: </strong>
                     {"₺ " + product.price}
                 </p>
                 <button
                     onClick={() => ShoppingContext.AddCart(product)}
                     className="btn-primary"
-                    style={{ width: "100px", padding: "8px" }}
+                    style={{ width: "120px", padding: "10px" }}
                 >
-                    Satın All
+                    <strong>Add to Cart </strong>
                 </button>
             </div>
         </div>
