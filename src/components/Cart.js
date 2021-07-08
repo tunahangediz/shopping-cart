@@ -17,21 +17,29 @@ function Cart() {
                             alt="img"
                         />
                         <div className="flex flex-column gap-2 content-center">
-                            <h1>{item.name}</h1>
-                            <h1>
+                            <strong>{item.name}</strong>
+                            <div>
                                 <strong>Total Price: ₺</strong>{" "}
                                 {(item.amount * item.price).toFixed(2)}
-                            </h1>
-                            <h1>
-                                <strong>Amount:</strong>
-                                {item.amount}
-                            </h1>
-                            <div>
+                            </div>
+
+                            <div
+                                className={
+                                    "primary-orange flex align-center content-between"
+                                }
+                                style={{
+                                    width: "150px",
+                                    background: "#C9C1B1",
+                                }}
+                            >
                                 <button
                                     onClick={() => Context.decrement(item)}
                                     className="btn-primary"
                                     style={{
                                         width: "50px",
+                                        background: "#C9C1B1",
+                                        border: "none",
+                                        borderRight: "1px solid black",
                                     }}
                                 >
                                     <strong>
@@ -39,11 +47,16 @@ function Cart() {
                                     </strong>
                                 </button>
 
+                                <strong>{item.amount}</strong>
+
                                 <button
                                     onClick={() => Context.increment(item)}
                                     className="btn-primary"
                                     style={{
                                         width: "50px",
+                                        background: "#C9C1B1",
+                                        border: "none",
+                                        borderLeft: "1px solid black",
                                     }}
                                 >
                                     <strong>

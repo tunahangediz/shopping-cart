@@ -6,11 +6,11 @@
 }
 body {
     width: 100vw;
-    /* background-color: rgb(0, 77, 172); */
+    background-color: #f7f5f1;
 }
 
 .bg-primary {
-    background-color: cornflowerblue;
+    background-color: #f8f5f2;
 }
 .mx-2 {
     margin: 0 2rem;
@@ -35,7 +35,7 @@ ul {
 }
 
 .navbar a {
-    color: #fff;
+    color: black;
     padding: 0.45rem;
     margin: 0 0.25rem;
 }
@@ -46,9 +46,9 @@ ul {
     margin: 0 1rem;
 }
 
-.navbar a:hover {
-    color: var(--light-color);
-}
+/* .navbar a:hover {
+    color: rgb(223, 86, 86);
+} */
 
 a {
     text-decoration: none;
@@ -63,9 +63,9 @@ a {
     display: flex;
     padding: 1rem;
     gap: 2rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0px 0px 16px 3px #aea9a977;
+    background-color: #efeae5;
+    /* border-radius: 5px;
+    box-shadow: 0px 0px 16px 3px #aea9a977; */
 }
 
 .flex {
@@ -81,6 +81,9 @@ a {
 .content-center {
     justify-content: center;
 }
+.align-center {
+    align-items: center;
+}
 
 .gap-4 {
     gap: 4rem;
@@ -91,20 +94,27 @@ a {
 }
 
 .btn-primary {
-    background-color: rgb(255, 98, 41);
+    /* background-color: rgb(255, 98, 41); */
+    background-color: #89744c;
     color: white;
     font-size: medium;
     border: none;
     border-radius: 2px;
 }
+.primary-orange {
+    background-color: rgb(255, 98, 41);
+}
 
 .btn-primary:hover {
-    background-color: rgb(254, 72, 6);
+    /* background-color: rgb(254, 72, 6); */
+    background-color: #876d3d;
     color: white;
 }
 .btn-primary:active {
-    box-shadow: 0px 0px 8px 2px #f48b3a;
+    /* box-shadow: 0px 0px 8px 2px #f48b3a; */
+    box-shadow: 0px 0px 8px 2px #89744c;
 }
+
 @media screen and (min-width: 700px) {
     .grid-2 {
         display: grid;

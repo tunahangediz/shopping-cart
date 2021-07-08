@@ -20,13 +20,26 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to="/cart">
-                            <h3>
+                            <h3 style={{ position: "relative" }}>
                                 CART
-                                <strong style={{ color: "tomato" }}>
-                                    {Context.cart.length > 0
+                                <span
+                                    style={{
+                                        color: "white",
+                                        position: "absolute",
+                                        right: "-24px",
+                                        top: "-12px",
+                                        backgroundColor: "black",
+                                        borderRadius: "50%",
+                                        width: "23px",
+                                        height: "23px",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                    }}
+                                >
+                                    {Context.cart.length >= 0
                                         ? " " + Context.cart.length
                                         : ""}
-                                </strong>
+                                </span>
                             </h3>
                         </Link>
                     </li>
