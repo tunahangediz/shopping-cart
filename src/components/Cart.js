@@ -13,7 +13,11 @@ function Cart() {
                     <div key={Math.random() * 100} className="product">
                         <img
                             src={item.img}
-                            style={{ width: "200px", maxHeight: "400px" }}
+                            style={{
+                                maxWidth: "250px",
+                                width: "100%",
+                                maxHeight: "400px",
+                            }}
                             alt="img"
                         />
                         <div className="flex flex-column gap-2 content-center">
@@ -36,7 +40,8 @@ function Cart() {
                                     onClick={() => Context.decrement(item)}
                                     className="btn-primary"
                                     style={{
-                                        width: "50px",
+                                        width: "100%",
+                                        maxWidth: "50px",
                                         background: "#C9C1B1",
                                         border: "none",
                                         borderRight: "1px solid black",
@@ -53,7 +58,8 @@ function Cart() {
                                     onClick={() => Context.increment(item)}
                                     className="btn-primary"
                                     style={{
-                                        width: "50px",
+                                        width: "100%",
+                                        maxWidth: "50px",
                                         background: "#C9C1B1",
                                         border: "none",
                                         borderLeft: "1px solid black",

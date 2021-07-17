@@ -7,7 +7,7 @@ const Product = ({ product }) => {
         <div className="product ">
             <img
                 src={product.image}
-                style={{ width: "250px", maxHeight: "400px" }}
+                style={{ maxWidth: "250px", width: "100%", maxHeight: "400px" }}
                 alt=""
             />
 
@@ -24,7 +24,11 @@ const Product = ({ product }) => {
                 <button
                     onClick={() => ShoppingContext.AddCart(product)}
                     className="btn-primary"
-                    style={{ width: "120px", padding: "10px" }}
+                    style={{
+                        width: "100%",
+                        maxWidth: "250px",
+                        padding: "10px",
+                    }}
                 >
                     <strong>Add to Cart </strong>
                 </button>

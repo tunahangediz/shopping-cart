@@ -11,15 +11,16 @@ function App() {
         <ShoppingStateContext>
             <Router>
                 <Switch>
-                    <Route exact path="/">
-                        <Navbar></Navbar>
-                        <div className="container">
+                    <div className="container">
+                        <Route exact path="/">
+                            <Navbar></Navbar>
+
                             <Products></Products>
-                        </div>
-                    </Route>
-                    <Route exact path="/cart">
-                        <Cart />
-                    </Route>
+                        </Route>
+                        <Route exact path="/cart">
+                            <Cart />
+                        </Route>
+                    </div>
                 </Switch>
             </Router>
         </ShoppingStateContext>
