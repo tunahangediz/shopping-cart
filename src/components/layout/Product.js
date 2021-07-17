@@ -5,7 +5,11 @@ const Product = ({ product }) => {
 
     return (
         <div className="product ">
-            <img src={product.image} style={{ width: "250px" }} alt="" />
+            <img
+                src={product.image}
+                style={{ width: "250px", maxHeight: "400px" }}
+                alt=""
+            />
 
             <div className="flex flex-column gap-4 content-center">
                 <h4>{product.name}</h4>

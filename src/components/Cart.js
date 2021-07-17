@@ -13,7 +13,7 @@ function Cart() {
                     <div key={Math.random() * 100} className="product">
                         <img
                             src={item.img}
-                            style={{ width: "200px" }}
+                            style={{ width: "200px", maxHeight: "400px" }}
                             alt="img"
                         />
                         <div className="flex flex-column gap-2 content-center">
