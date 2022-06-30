@@ -19,7 +19,7 @@ function ShoppingState(props) {
                 name: "1984",
                 author: "George Orwell",
                 price: 19.99,
-                image: "https://cdn1.dokuzsoft.com/u/cirayayinlari/img/b/1/9/198427ab71d70f13e8945d3ae968de82bed6.jpg",
+                image: "https://i.dr.com.tr/cache/600x600-0/originals/0000000064038-1.jpg",
             },
             {
                 id: 3,
